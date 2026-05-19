@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>சங்கீதா &amp; கோபிநாத் — திருமண அழைப்பிதழ் · 29 May 2026</title>
+    <meta name="description" content="K.கோபிநாத் &amp; M.சங்கீதா திருமண அழைப்பு — 29.05.2026 விழுப்புரம்" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Arima+Madurai:wght@400;700&family=Great+Vibes&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
+    <link rel="stylesheet" href="styles.css?v=2.0" />
+    <style>
+    :root{--maroon:#7B1C1C;--deep:#4A0A0A;--gold:#C9922A;--gold-l:#E8B84B;--cream:#FDF5E6;--saffron:#E07B39;--pink:#D4547A;--text:#2A0A0A;--glass:rgba(255,255,255,0.12);--glass-b:rgba(201,146,42,0.25)}
+
+    /* SCROLL PROGRESS */
+    .scroll-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--maroon),var(--gold),var(--gold-l));z-index:10001;width:0%;box-shadow:0 0 8px var(--gold)}
+
+    /* SPARKLE */
+    .sparkle{position:fixed;pointer-events:none;z-index:9999;width:8px;height:8px;border-radius:50%;animation:sparkleOut .8s ease forwards}
+    @keyframes sparkleOut{0%{transform:scale(1);opacity:1}100%{transform:scale(0) translate(var(--dx,20px),var(--dy,-30px));opacity:0}}
+
+    /* ===== FAMILY DETAILS SECTION ===== */
+    .family-section{
+        padding:80px 5%;
+        background:linear-gradient(135deg, rgba(74,10,10,0.97) 0%, rgba(45,10,10,0.95) 100%), url('bg_blessings.webp');
+        background-size:cover;background-position:center;
+        position:relative;overflow:hidden;
+        color:#fff;
+        text-align:center;
+    }
+    .family-section::before{
+        content:'';position:absolute;inset:0;
+        background:radial-gradient(ellipse at 50% 0%,rgba(201,146,42,0.12),transparent 60%);
+        pointer-events:none;
+    }
+    .family-grid{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:40px;
+        max-width:900px;
+        margin:50px auto 0;
+    }
+    .family-card{
+        background:rgba(255,255,255,0.04);
+        backdrop-filter:blur(20px);
+        border:1px solid rgba(201,146,42,0.3);
+        border-radius:24px;
+        padding:35px 30px;
+        position:relative;
+        transition:all 0.4s ease;
+        box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    }
+    .family-card:hover{
+        transform:translateY(-8px);
+        border-color:var(--gold);
+        box-shadow:0 30px 60px rgba(0,0,0,0.5),0 0 20px rgba(201,146,42,0.15);
+    }
+    .family-card__badge{
+        position:absolute;
+        top:-16px;left:50%;transform:translateX(-50%);
+        background:linear-gradient(135deg,var(--gold),var(--gold-l));
+        color:var(--deep);
+        font-family:'Poppins',sans-serif;
+        font-weight:800;font-size:0.7rem;
+        padding:5px 18px;border-radius:20px;
+        letter-spacing:2px;text-transform:uppercase;
+        white-space:nowrap;
+    }
+    .family-card__icon{
+        font-size:2rem;color:var(--gold);
+        margin-bottom:16px;
+        filter:drop-shadow(0 0 8px rgba(201,146,42,0.4));
+    }
+    .family-card__name{
+        font-family:'Noto Sans Tamil','Arima Madurai',cursive,sans-serif;
+        font-size:clamp(1.3rem,3vw,1.7rem);
+        color:#fff9ee;
+        font-weight:700;
+        line-height:1.4;
+        margin-bottom:8px;
+        font-feature-settings:"liga" 1,"dlig" 1;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+    }
+    .family-card__qual{
+        font-family:'Poppins',sans-serif;
+        font-size:0.8rem;
+        color:var(--gold-l);
+        opacity:0.85;
+        letter-spacing:1px;
+    }
+
+    /* ===== VENUE DETAILS CARDS ===== */
+    .venue-details-grid{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:30px;
+        max-width:900px;
+        margin:50px auto 0;
+    }
+    .venue-detail-card{
+        background:rgba(255,255,255,0.04);
+        backdrop-filter:blur(18px);
+        border:1px solid rgba(201,146,42,0.3);
+        border-radius:22px;
+        padding:35px 28px;
+        text-align:left;
+        position:relative;
+        transition:all 0.4s ease;
+        box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    }
+    .venue-detail-card:hover{
+        transform:translateY(-6px);
+        border-color:var(--gold-l);
+    }
+    .venue-detail-card__type{
+        display:inline-flex;align-items:center;gap:10px;
+        background:linear-gradient(135deg,var(--gold),var(--gold-l));
+        color:var(--deep);
+        font-family:'Poppins',sans-serif;
+        font-weight:700;font-size:0.72rem;
+        padding:5px 14px;border-radius:20px;
+        letter-spacing:2px;text-transform:uppercase;
+        margin-bottom:20px;
+    }
+    .venue-detail-card__title{
+        font-family:'Noto Sans Tamil','Arima Madurai',cursive,sans-serif;
+        font-size:clamp(1.1rem,2.5vw,1.4rem);
+        color:#fff9ee;
+        font-weight:700;
+        line-height:1.5;
+        margin-bottom:12px;
+        font-feature-settings:"liga" 1,"dlig" 1;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+    }
+    .venue-detail-card__date{
+        font-family:'Playfair Display',serif;
+        font-size:1.1rem;
+        color:var(--gold-l);
+        font-weight:700;
+        margin-bottom:8px;
+    }
+    .venue-detail-card__time{
+        font-family:'Poppins',sans-serif;
+        font-size:0.9rem;
+        color:rgba(255,255,255,0.75);
+        display:flex;align-items:center;gap:8px;
+        margin-bottom:6px;
+    }
+    .venue-detail-card__addr{
+        font-family:'Arima Madurai',cursive;
+        font-size:1.05rem;
+        color:rgba(253,245,230,0.85);
+        line-height:1.6;
+        margin-top:12px;
+        padding-top:12px;
+        border-top:1px solid rgba(201,146,42,0.2);
+    }
+    .venue-detail-card__map-btn{
+        display:inline-flex;align-items:center;gap:8px;
+        margin-top:15px;
+        padding:9px 20px;
+        background:rgba(201,146,42,0.15);
+        border:1px solid rgba(201,146,42,0.4);
+        color:var(--gold-l);
+        text-decoration:none;
+        border-radius:20px;
+        font-size:0.8rem;
+        font-family:'Poppins',sans-serif;
+        font-weight:600;
+        transition:all 0.3s;
+    }
+    .venue-detail-card__map-btn:hover{
+        background:var(--gold);color:var(--deep);transform:translateY(-2px);
+    }
+
+    /* ===== THIRUKKURAL ===== */
+    .thirukkural-section{padding:80px 5%;background:linear-gradient(135deg,#1a0505 0%,#2d0a0a 50%,#1a0505 100%);position:relative;overflow:hidden;text-align:center}
+    .thirukkural-section::after{content:'';position:absolute;inset:0;background-image:radial-gradient(var(--gold) 0.5px,transparent 0.5px);background-size:25px 25px;opacity:.05;pointer-events:none}
+    .kural-title{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,4vw,2rem);color:var(--gold-l);letter-spacing:6px;margin-bottom:12px;text-transform:uppercase}
+    .kural-subtitle{font-family:'Arima Madurai',cursive;font-size:1.1rem;color:rgba(253,245,230,.6);margin-bottom:50px;letter-spacing:2px}
+    .kural-carousel{position:relative;max-width:750px;margin:0 auto}
+    .kural-card{background:rgba(255,255,255,.03);border:1px solid rgba(201,146,42,.3);border-radius:30px;padding:50px 40px;backdrop-filter:blur(20px);box-shadow:0 30px 60px rgba(0,0,0,.5);position:relative;display:none;animation:kuralFade .6s ease forwards}
+    .kural-card.active{display:block}
+    @keyframes kuralFade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .kural-number{position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold),var(--gold-l));color:var(--deep);font-family:'Playfair Display',serif;font-weight:700;font-size:.8rem;padding:6px 20px;border-radius:20px;letter-spacing:3px;white-space:nowrap}
+    .kural-icon{font-size:2.5rem;margin-bottom:20px;display:block}
+    .kural-text{font-family:'Arima Madurai',cursive;font-size:clamp(1.3rem,3.5vw,1.8rem);color:#fff9ee;line-height:1.8;margin-bottom:20px;font-weight:700}
+    .kural-meaning{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(.95rem,2vw,1.15rem);color:rgba(232,184,75,.9);line-height:1.7;padding-top:20px;border-top:1px solid rgba(201,146,42,.2)}
+    .kural-nav{display:flex;justify-content:center;align-items:center;gap:20px;margin-top:35px}
+    .kural-dot{width:10px;height:10px;border-radius:50%;background:rgba(201,146,42,.3);border:none;cursor:pointer;transition:all .3s}
+    .kural-dot.active{background:var(--gold);transform:scale(1.4);box-shadow:0 0 8px var(--gold)}
+    .kural-prev,.kural-next{background:rgba(201,146,42,.15);border:1px solid rgba(201,146,42,.4);color:var(--gold-l);width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:1rem;transition:all .3s;display:flex;align-items:center;justify-content:center}
+    .kural-prev:hover,.kural-next:hover{background:var(--gold);color:var(--deep);transform:scale(1.1)}
+
+    /* GLASS BANNER */
+    .glass-banner{background:rgba(255,255,255,.05);backdrop-filter:blur(20px);border:1px solid rgba(201,146,42,.2);border-radius:20px;padding:25px 35px;margin:0 auto 40px;max-width:700px;text-align:center;position:relative;overflow:hidden}
+    .glass-banner::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,transparent,rgba(201,146,42,.1),transparent);animation:glassSpin 8s linear infinite}
+    @keyframes glassSpin{to{transform:rotate(360deg)}}
+    .glass-banner p{position:relative;z-index:1;font-family:'Arima Madurai',cursive;font-size:1.1rem;color:rgba(253,245,230,.9);line-height:1.7}
+    .glass-banner .quote-marks{font-size:3rem;color:var(--gold);opacity:.4;line-height:1;display:block}
+
+    /* CARTOONS */
+    .cartoon-bride{position:absolute;width:90px;height:120px;bottom:20px;right:30px;z-index:20;animation:cartoonFloat 3s ease-in-out infinite;cursor:pointer;filter:drop-shadow(0 15px 20px rgba(0,0,0,.4))}
+    .cartoon-groom{position:absolute;width:80px;height:115px;bottom:20px;left:30px;z-index:20;animation:cartoonFloat 3s ease-in-out infinite reverse;cursor:pointer;filter:drop-shadow(0 15px 20px rgba(0,0,0,.4))}
+    @keyframes cartoonFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-18px) rotate(2deg)}}
+    .cartoon-elephant{display:block;width:140px;margin:0 auto;animation:elephantWobble 4s ease-in-out infinite;filter:drop-shadow(0 10px 25px rgba(0,0,0,.5))}
+    @keyframes elephantWobble{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1deg) translateY(-5px)}}
+    .couple-cartoon-wrap{padding:40px 0 20px;text-align:center}
+    .tilt-card{transform-style:preserve-3d;transition:transform .3s ease}
+    .petals-wrap{position:fixed;inset:0;pointer-events:none;z-index:9997;overflow:hidden}
+    .pt{position:absolute;top:-20px;left:var(--x);width:var(--sz);height:calc(var(--sz)*1.7);background:radial-gradient(ellipse at 40% 40%,#f9a8d4,#e07b39 60%,transparent);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;opacity:0;animation:petalDrop var(--d) var(--dl) linear infinite}
+    @keyframes petalDrop{0%{opacity:0;transform:translateY(0) rotate(0deg)}10%{opacity:.7}90%{opacity:.4}100%{opacity:0;transform:translateY(105vh) rotate(720deg) translateX(-15px)}}
+
+    @media(max-width:768px){
+        .family-grid,.venue-details-grid{grid-template-columns:1fr}
+        .cartoon-bride{width:60px;height:80px}
+        .cartoon-groom{width:60px;height:80px}
+        .cartoon-elephant{width:100px}
+        .thirukkural-section{padding:60px 5%}
+        .kural-card{padding:35px 20px}
+        .family-section{padding:60px 5%}
+    }
+    @media(max-width:480px){
+        .cartoon-bride,.cartoon-groom,.cartoon-elephant{display:none}
+    }
+    </style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<div class="petals-wrap" aria-hidden="true">
+    <div class="pt" style="--x:8%;--d:9s;--dl:0s;--sz:10px"></div>
+    <div class="pt" style="--x:28%;--d:12s;--dl:3s;--sz:7px"></div>
+    <div class="pt" style="--x:52%;--d:10s;--dl:5s;--sz:12px"></div>
+    <div class="pt" style="--x:68%;--d:11s;--dl:1s;--sz:8px"></div>
+    <div class="pt" style="--x:82%;--d:13s;--dl:4s;--sz:9px"></div>
+    <div class="pt" style="--x:94%;--d:9s;--dl:2s;--sz:11px"></div>
+</div>
+
+<!-- WELCOME GATE -->
+<div id="welcome-gate" class="welcome-gate">
+    <div class="welcome-gate__door welcome-gate__door--left"></div>
+    <div class="welcome-gate__door welcome-gate__door--right"></div>
+    <div class="welcome-gate__bg"><div class="welcome-gate__mandala"></div></div>
+    <div class="welcome-gate__red-heart"></div>
+    <div class="welcome-gate__content">
+        <div class="welcome-gate__orna">
+            <span class="line"></span><i class="fa-solid fa-heart heart-blink"></i><span class="line"></span>
+        </div>
+        <p class="welcome-gate__sub">திருமண அழைப்பிதழ்</p>
+        <h1 class="welcome-gate__names">கோபிநாத் &amp; சங்கீதா</h1>
+        <div class="welcome-gate__date-pill"><span>29 · MAY · 2026</span></div>
+        <button id="welcome-btn" class="welcome-gate__btn" aria-label="Open Invitation">
+            <i class="fa-solid fa-envelope-open-text"></i>
+            <span>Open Invitation</span>
+        </button>
+    </div>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="home">
+    <div class="hero__bg">
+        <img src="temple_bg.webp" alt="" class="hero__img" width="1920" height="1080" fetchpriority="high" />
+        <div class="hero__overlay"></div>
+        <div class="hero__mandala"></div>
+    </div>
+    <div class="hero__content">
+        <div class="hero__orna anim-fade" style="--delay:.4s">
+            <span class="line"></span><i class="fa-solid fa-heart heart-blink"></i><span class="line"></span>
+        </div>
+        <p class="hero__invite anim-fade reveal" style="--delay:.6s">மாங்கல்யம் தந்துநானே மம ஜீவன ஹேதுநா...</p>
+        <h1 class="hero__names anim-fade" style="--delay:.8s">
+            <span>கோபிநாத்</span><em>&amp;</em><span>சங்கீதா</span>
+        </h1>
+        <p class="hero__tag anim-fade" style="--delay:1s">திருமண அழைப்பிதழ்</p>
+        <p class="hero__tag hero__tag--sub anim-fade" style="--delay:1.25s">அன்புடன் அழைக்கிறோம்</p>
+        <div class="hero__date-pill anim-fade" style="--delay:1.2s">
+            <span class="dp__num">29</span><span class="dp__dot"></span><span class="dp__rest">MAY · 2026</span>
+        </div>
+        <a href="#family" class="hero__arrow anim-fade" style="--delay:1.5s" aria-label="Scroll down">
+            <i class="fa-solid fa-angles-down"></i>
+        </a>
+    </div>
+    <!-- Cartoon Groom -->
+    <div class="cartoon-groom" title="மணமகன் கோபிநாத்">
+        <svg viewBox="0 0 80 115" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <ellipse cx="40" cy="85" rx="22" ry="28" fill="#FFF8F0" stroke="#E8B84B" stroke-width="1.5"/>
+            <rect x="18" y="100" width="44" height="8" rx="3" fill="#C9922A" opacity="0.8"/>
+            <ellipse cx="40" cy="72" rx="18" ry="16" fill="#7B1C1C"/>
+            <ellipse cx="40" cy="57" rx="7" ry="5" fill="#F5C8A0"/>
+            <ellipse cx="40" cy="42" rx="18" ry="20" fill="#F5C8A0"/>
+            <ellipse cx="40" cy="26" rx="18" ry="9" fill="#2A1A0A"/>
+            <ellipse cx="33" cy="42" rx="3.5" ry="4" fill="white"/>
+            <ellipse cx="47" cy="42" rx="3.5" ry="4" fill="white"/>
+            <circle cx="34" cy="43" r="2" fill="#1A0A00"/>
+            <circle cx="48" cy="43" r="2" fill="#1A0A00"/>
+            <path d="M30 38 Q33 36 36 38" stroke="#2A1A0A" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M44 38 Q47 36 50 38" stroke="#2A1A0A" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M34 50 Q40 56 46 50" stroke="#C0704A" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <circle cx="40" cy="35" r="2.5" fill="#C9922A"/>
+            <path d="M32 62 Q40 68 48 62" stroke="#FFD700" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <ellipse cx="16" cy="75" rx="7" ry="3.5" fill="#7B1C1C" transform="rotate(20 16 75)"/>
+            <ellipse cx="64" cy="75" rx="7" ry="3.5" fill="#7B1C1C" transform="rotate(-20 64 75)"/>
+            <circle cx="11" cy="79" r="5" fill="#F5C8A0"/>
+            <circle cx="69" cy="79" r="5" fill="#F5C8A0"/>
+            <text x="60" y="20" font-size="10" fill="#FFD700">✨</text>
+        </svg>
+    </div>
+    <!-- Cartoon Bride -->
+    <div class="cartoon-bride" title="மணமகள் சங்கீதா">
+        <svg viewBox="0 0 90 120" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <path d="M30 80 Q20 115 45 115 Q70 115 60 80 Z" fill="#7B1C1C"/>
+            <path d="M28 90 Q45 98 62 90" stroke="#E8B84B" stroke-width="2.5" fill="none"/>
+            <path d="M24 103 Q45 112 66 103" stroke="#E8B84B" stroke-width="2" fill="none" opacity="0.7"/>
+            <ellipse cx="45" cy="72" rx="17" ry="13" fill="#C9922A"/>
+            <ellipse cx="45" cy="59" rx="7" ry="5" fill="#F5C8A0"/>
+            <ellipse cx="45" cy="44" rx="19" ry="21" fill="#F5C8A0"/>
+            <ellipse cx="45" cy="27" rx="19" ry="10" fill="#1A0A00"/>
+            <path d="M26 30 Q24 65 28 80" fill="#1A0A00"/>
+            <path d="M64 30 Q66 65 62 80" fill="#1A0A00"/>
+            <ellipse cx="45" cy="20" rx="12" ry="8" fill="#1A0A00"/>
+            <circle cx="55" cy="18" r="6" fill="#FFB6C1"/>
+            <circle cx="55" cy="18" r="3" fill="#FFD700"/>
+            <circle cx="45" cy="36" r="3" fill="#CC0000"/>
+            <ellipse cx="37" cy="44" rx="4" ry="4.5" fill="white"/>
+            <ellipse cx="53" cy="44" rx="4" ry="4.5" fill="white"/>
+            <circle cx="38" cy="45" r="2.5" fill="#1A0A00"/>
+            <circle cx="54" cy="45" r="2.5" fill="#1A0A00"/>
+            <ellipse cx="32" cy="50" rx="5" ry="3" fill="#FFB6C1" opacity="0.5"/>
+            <ellipse cx="58" cy="50" rx="5" ry="3" fill="#FFB6C1" opacity="0.5"/>
+            <path d="M38 53 Q45 59 52 53" stroke="#C0704A" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M35 64 Q45 72 55 64" stroke="#FFD700" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <ellipse cx="22" cy="74" rx="8" ry="3.5" fill="#C9922A" transform="rotate(25 22 74)"/>
+            <ellipse cx="68" cy="74" rx="8" ry="3.5" fill="#C9922A" transform="rotate(-25 68 74)"/>
+            <circle cx="16" cy="79" r="5" fill="#F5C8A0"/>
+            <circle cx="74" cy="79" r="5" fill="#F5C8A0"/>
+            <circle cx="16" cy="79" r="5" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+            <circle cx="74" cy="79" r="5" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+            <text x="70" y="20" font-size="12" fill="#FFD700">✨</text>
+        </svg>
+    </div>
+    <div class="hero__corner hero__corner--tl"></div>
+    <div class="hero__corner hero__corner--tr"></div>
+    <div class="hero__corner hero__corner--bl"></div>
+    <div class="hero__corner hero__corner--br"></div>
+</header>
+
+<!-- COUPLE -->
+<section class="couple" id="couple">
+    <div class="couple__backdrop">
+        <img src="couple.webp" alt="கோபிநாத் &amp; சங்கீதா" class="couple__backdrop-img" loading="lazy" width="1920" height="600" />
+        <div class="couple__backdrop-overlay"></div>
+    </div>
+    <div class="couple__stage">
+        <div class="couple__stage-light"></div>
+        <div class="couple__stage-frame"></div>
+        <div class="cprofile tilt-card reveal">
+            <div class="cprofile__ring"></div>
+            <div class="cprofile__ring cprofile__ring--2"></div>
+            <div class="cprofile__glow"></div>
+            <div class="cprofile__icon"><i class="fa-solid fa-crown"></i></div>
+            <h3 class="cprofile__name" style="font-family:'Arima Madurai',cursive;font-size:1.8rem;color:transparent;background:linear-gradient(to bottom,#fff3c0,#e8b84b,#c9922a);-webkit-background-clip:text;background-clip:text">கோபிநாத்</h3>
+            <p class="cprofile__role">மணாளன்</p>
+        </div>
+        <div class="couple__monogram reveal">
+            <div class="cm__outer-ring"></div>
+            <div class="cm__inner">
+                <p class="cm__word">Together</p>
+                <p class="cm__symbol">♥</p>
+                <p class="cm__word">Forever</p>
+            </div>
+            <div class="cm__sparkles"><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="cprofile tilt-card reveal">
+            <div class="cprofile__ring"></div>
+            <div class="cprofile__ring cprofile__ring--2"></div>
+            <div class="cprofile__glow"></div>
+            <div class="cprofile__icon"><i class="fa-solid fa-gem"></i></div>
+            <h3 class="cprofile__name" style="font-family:'Arima Madurai',cursive;font-size:1.8rem;color:transparent;background:linear-gradient(to bottom,#fff3c0,#e8b84b,#c9922a);-webkit-background-clip:text;background-clip:text">சங்கீதா</h3>
+            <p class="cprofile__role">மணாளி</p>
+        </div>
+    </div>
+    <!-- Elephant -->
+    <div class="couple-cartoon-wrap">
+        <svg class="cartoon-elephant" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <ellipse cx="75" cy="65" rx="45" ry="30" fill="#9B8EA0"/>
+            <ellipse cx="35" cy="52" rx="28" ry="26" fill="#9B8EA0"/>
+            <ellipse cx="18" cy="48" rx="14" ry="18" fill="#C4B8C8"/>
+            <ellipse cx="18" cy="48" rx="10" ry="13" fill="#FFAAAA" opacity="0.6"/>
+            <path d="M20 62 Q5 75 12 88 Q15 95 22 90 Q18 78 28 68" fill="#9B8EA0"/>
+            <circle cx="28" cy="47" r="5" fill="white"/><circle cx="29" cy="47" r="3" fill="#1A0A00"/><circle cx="30" cy="46" r="1" fill="white"/>
+            <path d="M22 60 Q10 65 8 72" stroke="#FFFFF0" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <ellipse cx="80" cy="55" rx="38" ry="20" fill="#7B1C1C" opacity="0.85"/>
+            <path d="M42 55 Q80 45 118 55" stroke="#E8B84B" stroke-width="2.5" fill="none"/>
+            <path d="M48 62 Q80 52 112 62" stroke="#E8B84B" stroke-width="1.5" fill="none" opacity="0.7"/>
+            <circle cx="70" cy="52" r="3" fill="#FFD700"/><circle cx="80" cy="50" r="3" fill="#FFD700"/><circle cx="90" cy="52" r="3" fill="#FFD700"/>
+            <rect x="50" y="88" width="14" height="16" rx="5" fill="#9B8EA0"/>
+            <rect x="68" y="90" width="14" height="14" rx="5" fill="#9B8EA0"/>
+            <rect x="86" y="90" width="14" height="14" rx="5" fill="#9B8EA0"/>
+            <rect x="104" y="88" width="14" height="16" rx="5" fill="#9B8EA0"/>
+            <rect x="50" y="100" width="14" height="3" rx="1" fill="#FFD700" opacity="0.8"/>
+            <rect x="104" y="100" width="14" height="3" rx="1" fill="#FFD700" opacity="0.8"/>
+            <path d="M118 60 Q130 55 132 65 Q130 72 122 70" stroke="#9B8EA0" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M20 30 Q35 18 50 28" stroke="#FFD700" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <circle cx="35" cy="22" r="5" fill="#FFD700"/>
+            <text x="120" y="25" font-size="12" fill="#FFD700">✨</text>
+        </svg>
+    </div>
+</section>
+
+<!-- FAMILY DETAILS SECTION -->
+<section class="family-section" id="family">
+    <div class="sec-head sec-head--light reveal">
+        <span class="sec-head__icon"><i class="fa-solid fa-users"></i></span>
+        <h2 class="sec-head__title" style="color:var(--gold-l)">மணமக்கள்</h2>
+        <div class="sec-head__rule"></div>
+        <p class="sec-head__sub">இருவரும் ஒன்றாக வாழ்க்கை பயணம் தொடங்குகின்றனர்</p>
+    </div>
+    <div class="family-grid">
+        <div class="family-card tilt-card reveal">
+            <span class="family-card__badge">மணமகன்</span>
+            <div class="family-card__icon"><i class="fa-solid fa-crown"></i></div>
+            <div class="family-card__name">K. கோபிநாத்</div>
+            <div class="family-card__qual">D.E.E.E.</div>
+        </div>
+        <div class="family-card tilt-card reveal">
+            <span class="family-card__badge">மணமகள்</span>
+            <div class="family-card__icon"><i class="fa-solid fa-gem"></i></div>
+            <div class="family-card__name">M. சங்கீதா (எ) சௌமியா</div>
+            <div class="family-card__qual">B.Sc., (Physics)</div>
+        </div>
+    </div>
+</section>
+
+<!-- VENUE DETAILS SECTION -->
+<section class="events" id="events" style="padding:100px 5%">
+    <div class="thali-thread"></div>
+    <div style="position:relative;z-index:2">
+        <div class="sec-head sec-head--light reveal">
+            <div class="thali-sentiment reveal">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>நிகழ்ச்சி விவரங்கள்</span>
+            </div>
+            <div class="sec-head__rule"></div>
+            <p class="sec-head__sub">கெட்டிமேளம்… கெட்டிமேளம்…</p>
+        </div>
+        <div class="venue-details-grid">
+            <!-- Muhurtham Card -->
+            <div class="venue-detail-card tilt-card reveal">
+                <div class="venue-detail-card__type">
+                    <i class="fa-solid fa-hands-holding"></i> திருமண முகூர்த்தம்
+                </div>
+                <div class="venue-detail-card__title">ஸ்ரீ அபிராமேஸ்வரர் சன்னதி</div>
+                <div class="venue-detail-card__date">29 · 05 · 2026</div>
+                <div class="venue-detail-card__time">
+                    <i class="fa-regular fa-calendar" style="color:var(--gold)"></i>
+                    வெள்ளிக்கிழமை (Friday)
+                </div>
+                <div class="venue-detail-card__addr">
+                    திருவாமாத்தூர், விழுப்புரம்.
+                </div>
+                <a href="https://www.google.com/maps/search/Thiruvamattur+Villupuram" target="_blank" class="venue-detail-card__map-btn">
+                    <i class="fa-solid fa-location-arrow"></i> Get Directions
+                </a>
+            </div>
+            <!-- Reception Card -->
+            <div class="venue-detail-card tilt-card reveal">
+                <div class="venue-detail-card__type">
+                    <i class="fa-solid fa-star"></i> வரவேற்பு விழா
+                </div>
+                <div class="venue-detail-card__title">ஸ்ரீ பாலாஜி திருமண மண்டபம்</div>
+                <div class="venue-detail-card__date">29 · 05 · 2026</div>
+                <div class="venue-detail-card__time">
+                    <i class="fa-regular fa-clock" style="color:var(--gold)"></i>
+                    மாலை 6:00 மணிக்குமேல்
+                </div>
+                <div class="venue-detail-card__addr">
+                    கிழக்கு பாண்டிரோடு, விழுப்புரம்.
+                </div>
+                <a href="https://www.google.com/maps/search/Balaji+Thirumana+Mandapam+Villupuram" target="_blank" class="venue-detail-card__map-btn">
+                    <i class="fa-solid fa-location-arrow"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- THIRUKKURAL SECTION -->
+<section class="thirukkural-section" id="thirukkural">
+    <div class="sec-head sec-head--light reveal">
+        <span class="sec-head__icon"><i class="fa-solid fa-book-open"></i></span>
+        <h2 class="kural-title">திருக்குறள்</h2>
+        <p class="kural-subtitle">காதலும் திருமணமும் — Love &amp; Marriage</p>
+        <div class="sec-head__rule"></div>
+    </div>
+    <div class="glass-banner reveal">
+        <span class="quote-marks">"</span>
+        <p>வள்ளுவர் வாக்கில் காதல் அமரும், திருமணம் மலரும் — வாழ்க கோபிநாத்தும் சங்கீதாவும்!</p>
+        <span class="quote-marks">"</span>
+    </div>
+    <div class="kural-carousel reveal">
+        <div class="kural-card active" data-index="0">
+            <span class="kural-number">குறள் 1196 · அன்பு</span>
+            <span class="kural-icon">💑</span>
+            <p class="kural-text">செல்லாமை உண்டேல் எனக்குரை மற்றுநின்<br>வல்வரவு வாழ்வார்க்கு உரை.</p>
+            <p class="kural-meaning">"என்னிடம் பிரிவில்லை என்று சொல்வாயேல், மீண்டு வருவதை மற்றவர்களிடம் சொல்." — காதலர் ஒருவர் மற்றவரை நம்பி ஒன்றிணைந்திருக்கும் அன்பின் வலிமை.</p>
+        </div>
+        <div class="kural-card" data-index="1">
+            <span class="kural-number">குறள் 45 · இல்வாழ்க்கை</span>
+            <span class="kural-icon">🏠</span>
+            <p class="kural-text">இல்லதென் இல்லவள் மாண்பானால் உள்ளதென்<br>இல்லவள் மாணாக் கடை.</p>
+            <p class="kural-meaning">"மனைவி நற்பண்பு உடையவளாக இருந்தால் இல்லாதது ஒன்றுமில்லை; அவள் மாண்பில்லாதவளாக இருந்தால் இருப்பதும் பயனற்றது." — இல்லறத்தில் இருவரின் பண்பு முக்கியம்.</p>
+        </div>
+        <div class="kural-card" data-index="2">
+            <span class="kural-number">குறள் 1113 · காதல்</span>
+            <span class="kural-icon">❤️</span>
+            <p class="kural-text">தாம்வீழ்வார் மென்தோள் துயிலின் இனிதுகொல்<br>தாமரைக் கண்ணான் உலகு.</p>
+            <p class="kural-meaning">"காதலன் தோளில் தூங்குவதன் இனிமையை வேறு எங்கும் காண முடியாது — இந்திரன் உலகிலும்கூட!" — உண்மையான அன்பின் இனிமையான வலிமை.</p>
+        </div>
+        <div class="kural-card" data-index="3">
+            <span class="kural-number">குறள் 60 · வாழ்க்கைத்துணை</span>
+            <span class="kural-icon">🤝</span>
+            <p class="kural-text">மனைமாட்சி இல்லாள் வழக்கென்ப வாழ்க்கை<br>உனைமாட்சி தன்னால் வரும்.</p>
+            <p class="kural-meaning">"மனைவியின் நற்குணமே இல்லறத்தின் சிறப்பு; அந்த சிறப்பே வாழ்க்கையின் மாட்சியைத் தரும்." — கணவன்-மனைவி இருவரும் ஒன்றிணைந்து வாழும் பொழுது வாழ்வு சிறக்கும்.</p>
+        </div>
+    </div>
+    <div class="kural-nav">
+        <button class="kural-prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="kural-dot active" data-kural="0"></button>
+        <button class="kural-dot" data-kural="1"></button>
+        <button class="kural-dot" data-kural="2"></button>
+        <button class="kural-dot" data-kural="3"></button>
+        <button class="kural-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="countdown" id="countdown">
+    <div class="sec-head">
+        <span class="sec-head__icon"><i class="fa-solid fa-hourglass-half"></i></span>
+        <h2 class="sec-head__title">முகூர்த்த நேரம் நெருங்குகிறது…</h2>
+        <div class="sec-head__rule"></div>
+    </div>
+    <div class="cd-row">
+        <div class="cd-box"><span class="cd-box__num" id="cd-days">00</span><span class="cd-box__label">நாட்கள்</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-box"><span class="cd-box__num" id="cd-hours">00</span><span class="cd-box__label">மணி</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-box"><span class="cd-box__num" id="cd-mins">00</span><span class="cd-box__label">நிமிடம்</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-box"><span class="cd-box__num" id="cd-secs">00</span><span class="cd-box__label">நொடி</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-box cd-box--ms"><span class="cd-box__num" id="cd-ms">00</span><span class="cd-box__label">MS</span></div>
+    </div>
+    <p class="countdown__until">மங்கலமான தொடக்கம் வரை</p>
+</section>
+
+<!-- VENUE MAP -->
+<section class="venue" id="venue">
+    <div class="venue__overlay"></div>
+    <div class="venue__label-bar reveal">
+        <span class="line"></span>
+        <i class="fa-solid fa-location-crosshairs"></i>
+        <span>Wedding Venue</span>
+        <i class="fa-solid fa-location-crosshairs"></i>
+        <span class="line"></span>
+    </div>
+    <div class="vertical-journey">
+        <div class="journey-side side-right">
+            <div class="journey-item item-mahal reveal">
+                <div class="journey-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="journey-text">
+                    <p class="hub__label">வரவேற்பு இடம்</p>
+                    <h3 class="hub__value">ஸ்ரீ பாலாஜி திருமண மண்டபம்</h3>
+                    <p class="hub__sub">கிழக்கு பாண்டிரோடு</p>
+                </div>
+            </div>
+        </div>
+        <div class="road-v">
+            <div class="road-line"></div>
+            <div class="car-v"><img src="car_ornament.webp" alt="car" loading="lazy" /></div>
+        </div>
+        <div class="journey-side side-left">
+            <div class="journey-item item-address reveal">
+                <div class="journey-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="journey-text">
+                    <p class="hub__label">இடம்</p>
+                    <h3 class="hub__value">விழுப்புரம்</h3>
+                    <p class="hub__sub">Tamil Nadu, India</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="venue__actions reveal">
+        <a href="https://www.google.com/maps/search/Balaji+Thirumana+Mandapam+East+Pandiro+Road+Villupuram" target="_blank" class="venue__btn">
+            <i class="fa-solid fa-location-arrow"></i>
+            Get Directions
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="luxury-footer reveal" id="footer">
+    <div class="footer-wave">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="gold-grad-wave" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#C9922A"/><stop offset="50%" stop-color="#FFF3C0"/><stop offset="100%" stop-color="#C9922A"/>
+                </linearGradient>
+                <filter id="gold-glow"><feGaussianBlur stdDeviation="3" result="blur"/><feComposite in="SourceGraphic" in2="blur" operator="over"/></filter>
+            </defs>
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"/>
+            <path d="M0,27.35 A600.21,600.21,0,0,1,321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3" fill="none" stroke="url(#gold-grad-wave)" stroke-width="4" filter="url(#gold-glow)"/>
+        </svg>
+    </div>
+    <div class="footer-bg-layers"><div class="bg-gradient"></div><div class="bg-pattern"></div></div>
+    <div class="footer-particles">
+        <div class="particle" style="--x:8%;--sz:14px;--d:14s;--delay:0s">✨</div>
+        <div class="particle" style="--x:35%;--sz:16px;--d:12s;--delay:6s">✨</div>
+        <div class="particle" style="--x:68%;--sz:18px;--d:16s;--delay:4.5s">✨</div>
+        <div class="particle" style="--x:93%;--sz:13px;--d:13s;--delay:2.5s">✨</div>
+    </div>
+    <div class="footer-content">
+        <div class="footer-hero">
+            <div class="footer-ornament reveal-up"><span class="line"></span>அன்புடன் அழைக்கிறோம்<span class="line"></span></div>
+            <div class="footer-couple-wrap reveal-up" style="--delay:.2s">
+                <div class="f-couple-side">
+                    <h2 class="f-name" style="font-family:'Arima Madurai',cursive;font-size:clamp(1.8rem,5vw,3rem)">தனலட்சுமி - ராமலிங்கம் வம்சத்தின் திருமண நல்விழா... உறவுகள் சூழ வருகை தந்து வாழ்த்துங்கள்!</h2>
+                </div>
+                <!-- <div class="f-amp">&amp;</div>
+                <div class="f-couple-side">
+                    <h2 class="f-name" style="font-family:'Arima Madurai',cursive;font-size:clamp(1.8rem,5vw,3rem)">சங்கீதா</h2>
+                </div> -->
+            </div>
+            <div class="footer-date reveal-up" style="--delay:.4s">
+                <span class="fd-day">FRIDAY</span>
+                <span class="fd-divider">✦</span>
+                <span class="fd-date">29 . 05 . 2026</span>
+                <span class="fd-divider">✦</span>
+                <span class="fd-time">விழுப்புரம்</span>
+            </div>
+            <div class="footer-heart-rule reveal-up" style="--delay:.5s">
+                <i class="fa-solid fa-heart pulse"></i>
+            </div>
+        </div>
+        <div class="footer-final reveal-up" style="--delay:.6s">
+            <div class="rule"></div>
+            <div class="final-flex">
+                <p class="tagline">சாப்பாட்டுக்கு மொய் தேவையில்லை, உங்க அன்பு மட்டும் போதும்! (ஆனா மொய் எழுதினா தப்பில்லை!)</p>
+                <p class="dev">Made with <i class="fa-solid fa-heart"></i></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- AUDIO -->
+<div class="audio-player">
+    <button id="audio-toggle" class="audio-toggle-btn" aria-label="Play/Pause Music">
+        <div class="music-note-icon"><i class="fa-solid fa-music"></i></div>
+        <div class="music-wave"><span></span><span></span><span></span></div>
+    </button>
+    <audio id="wedding-audio" loop preload="none">
+        <source src="anbil_avan.mp3" type="audio/mp3">
+    </audio>
+</div>
+
+<script>
+// === SCROLL REVEAL ===
+const observer = new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');observer.unobserve(x.target)}})},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const footerObs = new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:0.05});
+document.querySelectorAll('.luxury-footer').forEach(el=>footerObs.observe(el));
+
+// === SCROLL PROGRESS + PARALLAX ===
+const scrollBar=document.getElementById('scrollProgress');
+let ticking=false;
+window.addEventListener('scroll',()=>{
+    if(!ticking){requestAnimationFrame(()=>{
+        const s=document.documentElement.scrollTop;
+        const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+        if(scrollBar)scrollBar.style.width=(s/h*100)+'%';
+        const img=document.querySelector('.hero__img');
+        if(img&&s<window.innerHeight)img.style.transform=`scale(1.05) translateY(${s*.25}px)`;
+        ticking=false;
+    });ticking=true;}
+},{passive:true});
+
+// === COUNTDOWN (29 May 2026 reception 6PM) ===
+function tick(){
+    const diff=new Date('2026-05-29T18:00:00')-new Date();
+    if(diff<=0){['cd-days','cd-hours','cd-mins','cd-secs','cd-ms'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent='00'});return}
+    const pad=n=>String(Math.floor(n)).padStart(2,'0');
+    const el=id=>document.getElementById(id);
+    if(el('cd-days'))el('cd-days').textContent=pad(diff/86400000);
+    if(el('cd-hours'))el('cd-hours').textContent=pad((diff%86400000)/3600000);
+    if(el('cd-mins'))el('cd-mins').textContent=pad((diff%3600000)/60000);
+    if(el('cd-secs'))el('cd-secs').textContent=pad((diff%60000)/1000);
+    if(el('cd-ms'))el('cd-ms').textContent=pad((diff%1000)/10);
+}
+tick();setInterval(tick,50);
+
+// === SPARKLE TRAIL ===
+let lastSpark=0;
+document.addEventListener('mousemove',(e)=>{
+    const now=Date.now();if(now-lastSpark<120)return;lastSpark=now;
+    const sp=document.createElement('div');sp.className='sparkle';
+    sp.style.cssText=`left:${e.clientX-4}px;top:${e.clientY-4}px;--dx:${(Math.random()-.5)*40}px;--dy:-${Math.random()*30+10}px;background:${Math.random()>.5?'#E8B84B':'#ff6b6b'}`;
+    document.body.appendChild(sp);setTimeout(()=>sp.remove(),800);
+});
+
+// === 3D TILT ===
+document.querySelectorAll('.tilt-card').forEach(card=>{
+    card.addEventListener('mousemove',(e)=>{
+        const r=card.getBoundingClientRect();
+        const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;
+        card.style.transform=`perspective(600px) rotateY(${x*15}deg) rotateX(${-y*15}deg) scale(1.04)`;
+    });
+    card.addEventListener('mouseleave',()=>{card.style.transform=''});
+});
+
+// === THIRUKKURAL CAROUSEL ===
+let ki=0;
+const kc=document.querySelectorAll('.kural-card');
+const kd=document.querySelectorAll('.kural-dot');
+let kt;
+function showKural(n){kc.forEach((c,i)=>c.classList.toggle('active',i===n));kd.forEach((d,i)=>d.classList.toggle('active',i===n));ki=n}
+function nextK(){showKural((ki+1)%kc.length)}
+function prevK(){showKural((ki-1+kc.length)%kc.length)}
+document.querySelector('.kural-next')?.addEventListener('click',()=>{nextK();clearInterval(kt);kt=setInterval(nextK,5000)});
+document.querySelector('.kural-prev')?.addEventListener('click',()=>{prevK();clearInterval(kt);kt=setInterval(nextK,5000)});
+kd.forEach(d=>d.addEventListener('click',()=>{showKural(+d.dataset.kural);clearInterval(kt);kt=setInterval(nextK,5000)}));
+kt=setInterval(nextK,5000);
+
+// === CARTOON CLICKS ===
+document.querySelector('.cartoon-bride')?.addEventListener('click',function(){
+    this.style.animation='none';this.style.transform='scale(1.3) rotate(-10deg)';
+    setTimeout(()=>{this.style.transform='';this.style.animation=''},600);
+    const h=document.createElement('div');const r=this.getBoundingClientRect();
+    h.style.cssText=`position:fixed;font-size:2rem;z-index:9999;animation:sparkleOut 1.5s ease forwards;--dx:0px;--dy:-80px;left:${r.left}px;top:${r.top}px;pointer-events:none`;
+    h.textContent='💖';document.body.appendChild(h);setTimeout(()=>h.remove(),1500);
+});
+document.querySelector('.cartoon-groom')?.addEventListener('click',function(){
+    this.style.animation='none';this.style.transform='scale(1.3) rotate(10deg)';
+    setTimeout(()=>{this.style.transform='';this.style.animation=''},600);
+    const h=document.createElement('div');const r=this.getBoundingClientRect();
+    h.style.cssText=`position:fixed;font-size:2rem;z-index:9999;animation:sparkleOut 1.5s ease forwards;--dx:0px;--dy:-80px;left:${r.left}px;top:${r.top}px;pointer-events:none`;
+    h.textContent='⭐';document.body.appendChild(h);setTimeout(()=>h.remove(),1500);
+});
+
+// === WELCOME GATE + AUDIO ===
+const audio=document.getElementById('wedding-audio');
+const audioToggle=document.getElementById('audio-toggle');
+const welcomeBtn=document.getElementById('welcome-btn');
+document.body.classList.add('gate-locked');
+function triggerEntranceSequence(){
+    const content=document.querySelector('.welcome-gate__content');
+    const gate=document.getElementById('welcome-gate');
+    if(!gate)return;
+    if(audio){audio.preload='auto';audio.muted=true;audio.play().then(()=>{if(audioToggle)audioToggle.classList.add('playing')}).catch(e=>console.log(e))}
+    if(content)content.classList.add('content-hidden');
+    gate.classList.add('show-red-heart');
+    setTimeout(()=>gate.classList.add('gate-opened'),1200);
+    setTimeout(()=>{
+        if(audio){audio.muted=false;audio.currentTime=0;audio.volume=0;let v=0;const fi=setInterval(()=>{if(v<1){v+=.08;audio.volume=Math.min(v,1)}else clearInterval(fi)},100)}
+        setTimeout(()=>{if(gate)gate.remove();document.body.classList.remove('gate-locked')},450);
+    },2200);
+}
+if(welcomeBtn)welcomeBtn.addEventListener('click',(e)=>{e.stopPropagation();triggerEntranceSequence()});
+if(audioToggle&&audio){
+    audioToggle.addEventListener('click',(e)=>{
+        e.stopPropagation();
+        if(audio.paused){audio.muted=false;audio.volume=1;audio.play().then(()=>audioToggle.classList.add('playing')).catch(e=>console.log(e))}
+        else{audio.pause();audioToggle.classList.remove('playing')}
+    });
+}
+</script>
+</body>
+</html>
