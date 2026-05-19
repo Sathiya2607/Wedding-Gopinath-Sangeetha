@@ -25,7 +25,32 @@
 }
 
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* ── MOBILE SMOOTH SCROLL MOMENTUM ── */
+@media (max-width: 768px) {
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+  }
+}
+
+/* ── HIDE NATIVE SCROLLBAR (keep scroll working) ── */
+html::-webkit-scrollbar { width: 0; background: transparent; }
+html { scrollbar-width: none; -ms-overflow-style: none; }
+
+/* ── CUSTOM THIN GOLD SCROLLBAR (desktop only) ── */
+@media (min-width: 769px) {
+  html::-webkit-scrollbar { width: 4px; }
+  html::-webkit-scrollbar-track { background: #2a0a0a; }
+  html::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--gold), var(--maroon));
+    border-radius: 4px;
+  }
+  html { scrollbar-width: thin; scrollbar-color: var(--gold) #2a0a0a; }
 }
 
 /* TAMIL TEXT RENDERING */
@@ -550,24 +575,64 @@ img {
 }
 
 .hero__arrow {
-  margin-top: 10px;
+  margin-top: 18px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  animation: scrollBounce 2s ease-in-out infinite;
+  transition: opacity 0.5s ease;
+}
+
+.hero__arrow::before {
+  content: 'SCROLL';
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 4px;
+  color: rgba(232,184,75,0.6);
+}
+
+.hero__arrow i {
+  font-size: 1.6rem;
   color: var(--gold);
-  font-size: 1.4rem;
-  animation: bounce 2s ease-in-out infinite;
-  text-decoration: none
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(201,146,42,0.7));
 }
 
-@keyframes bounce {
-
-  0%,
-  100% {
-    transform: translateY(0)
-  }
-
-  50% {
-    transform: translateY(10px)
-  }
+.hero__arrow .scroll-mouse {
+  width: 26px;
+  height: 40px;
+  border: 2px solid rgba(201,146,42,0.6);
+  border-radius: 13px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
 }
+
+.hero__arrow .scroll-mouse::before {
+  content: '';
+  width: 4px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 2px;
+  animation: mouseScroll 1.8s ease-in-out infinite;
+  display: block;
+}
+
+@keyframes mouseScroll {
+  0%   { opacity: 1; transform: translateY(0); }
+  80%  { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 0; transform: translateY(0); }
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(10px); }
+}
+
+.hero__arrow.hidden { opacity: 0; pointer-events: none; }
 
 /* Hero Corner Floral Ornaments */
 .hero__corner {

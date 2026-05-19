@@ -196,17 +196,95 @@
     .kural-prev,.kural-next{background:rgba(201,146,42,.15);border:1px solid rgba(201,146,42,.4);color:var(--gold-l);width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:1rem;transition:all .3s;display:flex;align-items:center;justify-content:center}
     .kural-prev:hover,.kural-next:hover{background:var(--gold);color:var(--deep);transform:scale(1.1)}
 
+    /* ===== SCROLL FAB (UP/DOWN) ===== */
+    .scroll-fab{
+        position:fixed;
+        bottom:95px;
+        right:30px;
+        transform:translateY(10px);
+        width:48px;height:48px;
+        border-radius:50%;
+        background:linear-gradient(135deg,var(--maroon),var(--deep));
+        border:2px solid rgba(201,146,42,0.5);
+        color:var(--gold);
+        font-size:1.1rem;
+        cursor:pointer;
+        z-index:8998;
+        display:flex;align-items:center;justify-content:center;
+        box-shadow:0 6px 20px rgba(0,0,0,0.5),0 0 0 0 rgba(201,146,42,0.3);
+        opacity:0;
+        pointer-events:none;
+        transition:opacity 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease, background 0.4s ease;
+        animation:fabPulseRing 2.5s ease-in-out infinite;
+    }
+    .scroll-fab.visible{
+        opacity:1;
+        pointer-events:auto;
+        transform:translateY(0);
+    }
+    .scroll-fab:hover{
+        background:linear-gradient(135deg,var(--gold),var(--gold-l));
+        color:var(--deep);
+        border-color:var(--gold-l);
+        box-shadow:0 10px 30px rgba(201,146,42,0.5);
+        transform:translateY(-3px);
+    }
+    .scroll-fab.is-up{
+        background:linear-gradient(135deg,var(--deep),#6b0f0f);
+        border-color:rgba(201,146,42,0.7);
+    }
+
+    /* ===== MOBILE SCROLL HINT ===== */
+    .scroll-hint-overlay{
+        position:fixed;bottom:0;left:0;right:0;
+        height:80px;
+        background:linear-gradient(to top,rgba(74,10,10,0.7),transparent);
+        z-index:8990;pointer-events:none;
+        display:flex;align-items:flex-end;justify-content:center;
+        padding-bottom:12px;
+        animation:hintFadeIn 1s 2.5s ease both;
+        opacity:0;
+    }
+    .scroll-hint-overlay.hide{
+        animation:hintFadeOut 0.5s ease forwards;
+    }
+    @keyframes hintFadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes hintFadeOut{to{opacity:0;pointer-events:none}}
+    .scroll-hint-text{
+        font-family:'Poppins',sans-serif;
+        font-size:0.62rem;
+        letter-spacing:3px;
+        color:rgba(232,184,75,0.8);
+        text-transform:uppercase;
+        display:flex;align-items:center;gap:8px;
+        animation:hintBob 1.5s ease-in-out infinite;
+    }
+    .scroll-hint-text i{font-size:0.8rem;}
+    @keyframes hintBob{
+        0%,100%{transform:translateY(0)}
+        50%{transform:translateY(5px)}
+    }
+    @media(min-width:769px){.scroll-hint-overlay{display:none}}
+    @keyframes fabPulseRing{
+        0%,100%{box-shadow:0 6px 20px rgba(0,0,0,0.5),0 0 0 0 rgba(201,146,42,0.3)}
+        50%{box-shadow:0 6px 20px rgba(0,0,0,0.5),0 0 0 8px rgba(201,146,42,0)}
+    }
+    @media(max-width:480px){
+        .scroll-fab{bottom:86px;right:16px;width:44px;height:44px;font-size:1rem;}
+    }
+
     /* ===== SIDE NAV DOTS ===== */
     #scroll-nav-dots{
-        position:fixed;right:18px;top:50%;transform:translateY(-50%);
+        position:fixed;right:12px;top:50%;transform:translateY(-50%);
         z-index:9000;display:flex;flex-direction:column;gap:10px;
         pointer-events:auto;
     }
     .snd{
         display:flex;align-items:center;gap:8px;
         text-decoration:none;cursor:pointer;
-        flex-direction:row-reverse;
+        flex-direction:row;
         position:relative;
+        justify-content:flex-end;
     }
     .snd__dot{
         width:9px;height:9px;border-radius:50%;
@@ -218,19 +296,24 @@
     }
     .snd__label{
         font-family:'Poppins',sans-serif;
-        font-size:0.68rem;
-        color:rgba(201,146,42,0.7);
+        font-size:0.65rem;
+        color:rgba(201,146,42,0.9);
         letter-spacing:1px;
         opacity:0;
-        transform:translateX(8px);
-        transition:all 0.3s ease;
+        transition:opacity 0.3s ease;
         white-space:nowrap;
         pointer-events:none;
+        position:fixed;
+        right:30px;
+        background:rgba(74,10,10,0.9);
+        padding:3px 10px;
+        border-radius:10px;
+        border:1px solid rgba(201,146,42,0.3);
+        transform:translateY(-50%);
     }
     .snd:hover .snd__label,
     .snd--active .snd__label{
         opacity:1;
-        transform:translateX(0);
     }
     .snd--active .snd__dot{
         background:var(--gold);
@@ -298,6 +381,68 @@
     @keyframes sRevealUpBig{
         from{opacity:0;transform:translateY(50px);}
         to{opacity:1;transform:translateY(0);}
+    }
+
+    /* ===== FOOTER DUAL DATE CARDS ===== */
+    .footer-dates-wrap{
+        display:flex;align-items:center;justify-content:center;
+        gap:24px;flex-wrap:wrap;margin:20px auto 10px;
+    }
+    .footer-date-card{
+        background:rgba(255,255,255,0.05);
+        border:1px solid rgba(201,146,42,0.3);
+        border-radius:18px;
+        padding:20px 28px;
+        text-align:center;
+        display:flex;flex-direction:column;gap:6px;
+        backdrop-filter:blur(12px);
+        min-width:200px;
+        transition:all 0.3s ease;
+    }
+    .footer-date-card:hover{
+        border-color:var(--gold);
+        background:rgba(201,146,42,0.08);
+        transform:translateY(-4px);
+        box-shadow:0 12px 30px rgba(0,0,0,0.4);
+    }
+    .fdc-label{
+        font-family:'Poppins',sans-serif;
+        font-size:0.62rem;
+        letter-spacing:2.5px;
+        text-transform:uppercase;
+        color:var(--gold);
+        font-weight:700;
+    }
+    .footer-date-card .fd-day{
+        font-family:'Poppins',sans-serif;
+        font-size:0.75rem;
+        letter-spacing:3px;
+        color:rgba(232,184,75,0.7);
+    }
+    .footer-date-card .fd-date{
+        font-family:'Playfair Display',serif;
+        font-size:1.3rem;
+        font-weight:700;
+        color:#fff9ee;
+        letter-spacing:2px;
+    }
+    .footer-date-card .fd-time{
+        font-family:'Arima Madurai',cursive;
+        font-size:0.82rem;
+        color:rgba(253,245,230,0.6);
+        line-height:1.4;
+    }
+    .fdc-divider{
+        font-size:1.4rem;
+        color:#ff4e6a;
+        animation:heartBlink 1.2s ease-in-out infinite;
+        filter:drop-shadow(0 0 8px rgba(255,78,106,0.5));
+        flex-shrink:0;
+    }
+    @media(max-width:480px){
+        .footer-dates-wrap{flex-direction:column;gap:16px;}
+        .footer-date-card{min-width:85vw;padding:16px 20px;}
+        .fdc-divider{transform:rotate(90deg);}
     }
 
     /* GLASS BANNER */
@@ -389,8 +534,9 @@
         <div class="hero__date-pill anim-fade" style="--delay:1.2s">
             <span class="dp__num">28</span><span class="dp__dot"></span><span class="dp__rest">MAY · 2026</span>
         </div>
-        <a href="#family" class="hero__arrow anim-fade" style="--delay:1.5s" aria-label="Scroll down">
-            <i class="fa-solid fa-angles-down"></i>
+        <a href="#couple" class="hero__arrow anim-fade" id="heroArrow" style="--delay:1.5s" aria-label="Scroll down">
+            <div class="scroll-mouse"></div>
+            <i class="fa-solid fa-chevron-down"></i>
         </a>
     </div>
     <!-- Cartoon Groom -->
@@ -744,12 +890,20 @@
                     <h2 class="f-name" style="font-family:'Arima Madurai',cursive;font-size:clamp(1.8rem,5vw,3rem)">சங்கீதா</h2>
                 </div> -->
             </div>
-            <div class="footer-date reveal-up" style="--delay:.4s">
-                <span class="fd-day">THURSDAY</span>
-                <span class="fd-divider">✦</span>
-                <span class="fd-date">28 . 05 . 2026</span>
-                <span class="fd-divider">✦</span>
-                <span class="fd-time">விழுப்புரம்</span>
+            <div class="footer-dates-wrap reveal-up" style="--delay:.4s">
+                <div class="footer-date-card">
+                    <span class="fdc-label">திருமண முகூர்த்தம்</span>
+                    <span class="fd-day">THURSDAY</span>
+                    <span class="fd-date">28 . 05 . 2026</span>
+                    <span class="fd-time">ஸ்ரீ அபிராமேஸ்வரர் சன்னதி, திருவாமாத்தூர்</span>
+                </div>
+                <div class="fdc-divider"><i class="fa-solid fa-heart"></i></div>
+                <div class="footer-date-card">
+                    <span class="fdc-label">வரவேற்பு விழா</span>
+                    <span class="fd-day">FRIDAY</span>
+                    <span class="fd-date">29 . 05 . 2026</span>
+                    <span class="fd-time">ஸ்ரீ பாலாஜி திருமண மண்டபம், விழுப்புரம்</span>
+                </div>
             </div>
             <div class="footer-heart-rule reveal-up" style="--delay:.5s">
                 <i class="fa-solid fa-heart pulse"></i>
@@ -764,6 +918,20 @@
         </div>
     </div>
 </footer>
+
+<!-- MOBILE SCROLL HINT -->
+<div class="scroll-hint-overlay" id="scrollHint">
+    <span class="scroll-hint-text">
+        <i class="fa-solid fa-angles-down"></i>
+        கீழே உருட்டுங்கள்
+        <i class="fa-solid fa-angles-down"></i>
+    </span>
+</div>
+
+<!-- SCROLL UP/DOWN BUTTON -->
+<button id="scrollFab" class="scroll-fab" aria-label="Scroll">
+    <i class="fa-solid fa-chevron-down" id="scrollFabIcon"></i>
+</button>
 
 <!-- AUDIO -->
 <div class="audio-player">
@@ -783,8 +951,9 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 const footerObs = new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:0.05});
 document.querySelectorAll('.luxury-footer').forEach(el=>footerObs.observe(el));
 
-// === SCROLL PROGRESS + PARALLAX ===
+// === SCROLL PROGRESS + PARALLAX + HIDE ARROW ===
 const scrollBar=document.getElementById('scrollProgress');
+const heroArrow=document.getElementById('heroArrow');
 let ticking=false;
 window.addEventListener('scroll',()=>{
     if(!ticking){requestAnimationFrame(()=>{
@@ -793,6 +962,7 @@ window.addEventListener('scroll',()=>{
         if(scrollBar)scrollBar.style.width=(s/h*100)+'%';
         const img=document.querySelector('.hero__img');
         if(img&&s<window.innerHeight)img.style.transform=`scale(1.05) translateY(${s*.25}px)`;
+        if(heroArrow)heroArrow.classList.toggle('hidden',s>80);
         ticking=false;
     });ticking=true;}
 },{passive:true});
@@ -858,6 +1028,59 @@ document.querySelector('.cartoon-groom')?.addEventListener('click',function(){
     h.style.cssText=`position:fixed;font-size:2rem;z-index:9999;animation:sparkleOut 1.5s ease forwards;--dx:0px;--dy:-80px;left:${r.left}px;top:${r.top}px;pointer-events:none`;
     h.textContent='⭐';document.body.appendChild(h);setTimeout(()=>h.remove(),1500);
 });
+
+// === MOBILE SCROLL HINT HIDE ===
+(function(){
+    const hint=document.getElementById('scrollHint');
+    if(!hint)return;
+    let hidden=false;
+    window.addEventListener('scroll',()=>{
+        if(!hidden&&window.scrollY>60){
+            hidden=true;
+            hint.classList.add('hide');
+            setTimeout(()=>hint.remove(),500);
+        }
+    },{passive:true,once:false});
+})();
+
+// === SCROLL FAB (UP / DOWN) ===
+(function(){
+    const fab=document.getElementById('scrollFab');
+    const icon=document.getElementById('scrollFabIcon');
+    if(!fab||!icon)return;
+
+    function updateFab(){
+        const s=window.scrollY;
+        const maxScroll=document.documentElement.scrollHeight-window.innerHeight;
+        const nearBottom=s>maxScroll-300;
+
+        // Show after scrolling 200px
+        fab.classList.toggle('visible', s>200);
+
+        if(nearBottom){
+            icon.className='fa-solid fa-chevron-up';
+            fab.classList.add('is-up');
+            fab.setAttribute('aria-label','Scroll to top');
+        } else {
+            icon.className='fa-solid fa-chevron-down';
+            fab.classList.remove('is-up');
+            fab.setAttribute('aria-label','Scroll down');
+        }
+    }
+
+    fab.addEventListener('click',()=>{
+        const s=window.scrollY;
+        const maxScroll=document.documentElement.scrollHeight-window.innerHeight;
+        if(s>maxScroll-300){
+            window.scrollTo({top:0,behavior:'smooth'});
+        } else {
+            window.scrollBy({top:window.innerHeight*0.85,behavior:'smooth'});
+        }
+    });
+
+    window.addEventListener('scroll',updateFab,{passive:true});
+    updateFab();
+})();
 
 // === SIDE NAV DOTS ===
 (function(){
