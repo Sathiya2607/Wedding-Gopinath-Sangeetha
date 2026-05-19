@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>சங்கீதா &amp; கோபிநாத் — திருமண அழைப்பிதழ் · 29 May 2026</title>
-    <meta name="description" content="K.கோபிநாத் &amp; M.சங்கீதா திருமண அழைப்பு — 29.05.2026 விழுப்புரம்" />
+    <title>சங்கீதா &amp; கோபிநாத் — திருமண அழைப்பிதழ் · 28 May 2026</title>
+    <meta name="description" content="K.கோபிநாத் &amp; M.சங்கீதா திருமண அழைப்பு — 28.05.2026 விழுப்புரம்" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Arima+Madurai:wght@400;700&family=Great+Vibes&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -196,6 +196,110 @@
     .kural-prev,.kural-next{background:rgba(201,146,42,.15);border:1px solid rgba(201,146,42,.4);color:var(--gold-l);width:44px;height:44px;border-radius:50%;cursor:pointer;font-size:1rem;transition:all .3s;display:flex;align-items:center;justify-content:center}
     .kural-prev:hover,.kural-next:hover{background:var(--gold);color:var(--deep);transform:scale(1.1)}
 
+    /* ===== SIDE NAV DOTS ===== */
+    #scroll-nav-dots{
+        position:fixed;right:18px;top:50%;transform:translateY(-50%);
+        z-index:9000;display:flex;flex-direction:column;gap:10px;
+        pointer-events:auto;
+    }
+    .snd{
+        display:flex;align-items:center;gap:8px;
+        text-decoration:none;cursor:pointer;
+        flex-direction:row-reverse;
+        position:relative;
+    }
+    .snd__dot{
+        width:9px;height:9px;border-radius:50%;
+        background:rgba(201,146,42,0.35);
+        border:1.5px solid rgba(201,146,42,0.5);
+        transition:all 0.35s cubic-bezier(.4,0,.2,1);
+        flex-shrink:0;
+        display:block;
+    }
+    .snd__label{
+        font-family:'Poppins',sans-serif;
+        font-size:0.68rem;
+        color:rgba(201,146,42,0.7);
+        letter-spacing:1px;
+        opacity:0;
+        transform:translateX(8px);
+        transition:all 0.3s ease;
+        white-space:nowrap;
+        pointer-events:none;
+    }
+    .snd:hover .snd__label,
+    .snd--active .snd__label{
+        opacity:1;
+        transform:translateX(0);
+    }
+    .snd--active .snd__dot{
+        background:var(--gold);
+        border-color:var(--gold-l);
+        width:13px;height:13px;
+        box-shadow:0 0 10px rgba(201,146,42,0.7);
+    }
+    .snd:hover .snd__dot{
+        background:rgba(201,146,42,0.7);
+        transform:scale(1.2);
+    }
+    @media(max-width:480px){
+        #scroll-nav-dots{right:8px;gap:8px;}
+        .snd__label{display:none}
+        .snd__dot{width:7px;height:7px;}
+        .snd--active .snd__dot{width:10px;height:10px;}
+    }
+
+    /* ===== STAGGERED REVEALS ===== */
+    .reveal-stagger{
+        opacity:0;
+        transform:translateY(28px) scale(0.97);
+        transition:opacity 0.65s ease,transform 0.65s ease;
+        transition-delay:calc(var(--si,0)*0.12s);
+    }
+    .reveal-stagger.visible{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
+    /* ===== SECTION ENTRANCE ANIMATIONS ===== */
+    .section-reveal{will-change:transform,opacity;}
+
+    /* Zoom in */
+    .reveal-zoom{
+        animation:sRevealZoom 0.85s cubic-bezier(.22,1,.36,1) both;
+    }
+    @keyframes sRevealZoom{
+        from{opacity:0;transform:scale(0.94);}
+        to{opacity:1;transform:scale(1);}
+    }
+
+    /* Slide from left */
+    .reveal-left{
+        animation:sRevealLeft 0.85s cubic-bezier(.22,1,.36,1) both;
+    }
+    @keyframes sRevealLeft{
+        from{opacity:0;transform:translateX(-40px);}
+        to{opacity:1;transform:translateX(0);}
+    }
+
+    /* Slide from right */
+    .reveal-right{
+        animation:sRevealRight 0.85s cubic-bezier(.22,1,.36,1) both;
+    }
+    @keyframes sRevealRight{
+        from{opacity:0;transform:translateX(40px);}
+        to{opacity:1;transform:translateX(0);}
+    }
+
+    /* Big up */
+    .reveal-up-big{
+        animation:sRevealUpBig 0.9s cubic-bezier(.22,1,.36,1) both;
+    }
+    @keyframes sRevealUpBig{
+        from{opacity:0;transform:translateY(50px);}
+        to{opacity:1;transform:translateY(0);}
+    }
+
     /* GLASS BANNER */
     .glass-banner{background:rgba(255,255,255,.05);backdrop-filter:blur(20px);border:1px solid rgba(201,146,42,.2);border-radius:20px;padding:25px 35px;margin:0 auto 40px;max-width:700px;text-align:center;position:relative;overflow:hidden}
     .glass-banner::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,transparent,rgba(201,146,42,.1),transparent);animation:glassSpin 8s linear infinite}
@@ -257,7 +361,7 @@
         </div>
         <p class="welcome-gate__sub">திருமண அழைப்பிதழ்</p>
         <h1 class="welcome-gate__names">கோபிநாத் &amp; சங்கீதா</h1>
-        <div class="welcome-gate__date-pill"><span>29 · MAY · 2026</span></div>
+        <div class="welcome-gate__date-pill"><span>28 · MAY · 2026</span></div>
         <button id="welcome-btn" class="welcome-gate__btn" aria-label="Open Invitation">
             <i class="fa-solid fa-envelope-open-text"></i>
             <span>Open Invitation</span>
@@ -283,7 +387,7 @@
         <p class="hero__tag anim-fade" style="--delay:1s">திருமண அழைப்பிதழ்</p>
         <p class="hero__tag hero__tag--sub anim-fade" style="--delay:1.25s">அன்புடன் அழைக்கிறோம்</p>
         <div class="hero__date-pill anim-fade" style="--delay:1.2s">
-            <span class="dp__num">29</span><span class="dp__dot"></span><span class="dp__rest">MAY · 2026</span>
+            <span class="dp__num">28</span><span class="dp__dot"></span><span class="dp__rest">MAY · 2026</span>
         </div>
         <a href="#family" class="hero__arrow anim-fade" style="--delay:1.5s" aria-label="Scroll down">
             <i class="fa-solid fa-angles-down"></i>
@@ -459,10 +563,10 @@
                     <i class="fa-solid fa-hands-holding"></i> திருமண முகூர்த்தம்
                 </div>
                 <div class="venue-detail-card__title">ஸ்ரீ அபிராமேஸ்வரர் சன்னதி</div>
-                <div class="venue-detail-card__date">29 · 05 · 2026</div>
+                <div class="venue-detail-card__date">28 · 05 · 2026</div>
                 <div class="venue-detail-card__time">
                     <i class="fa-regular fa-calendar" style="color:var(--gold)"></i>
-                    வெள்ளிக்கிழமை (Friday)
+                    வியாழக்கிழமை (Thursday)
                 </div>
                 <div class="venue-detail-card__addr">
                     திருவாமாத்தூர், விழுப்புரம்.
@@ -480,7 +584,7 @@
                 <div class="venue-detail-card__date">29 · 05 · 2026</div>
                 <div class="venue-detail-card__time">
                     <i class="fa-regular fa-clock" style="color:var(--gold)"></i>
-                    மாலை 6:00 மணிக்குமேல்
+                    வெள்ளிக்கிழமை (Friday) · மாலை 6:00 மணிக்குமேல்
                 </div>
                 <div class="venue-detail-card__addr">
                     கிழக்கு பாண்டிரோடு, விழுப்புரம்.
@@ -641,9 +745,9 @@
                 </div> -->
             </div>
             <div class="footer-date reveal-up" style="--delay:.4s">
-                <span class="fd-day">FRIDAY</span>
+                <span class="fd-day">THURSDAY</span>
                 <span class="fd-divider">✦</span>
-                <span class="fd-date">29 . 05 . 2026</span>
+                <span class="fd-date">28 . 05 . 2026</span>
                 <span class="fd-divider">✦</span>
                 <span class="fd-time">விழுப்புரம்</span>
             </div>
@@ -695,7 +799,7 @@ window.addEventListener('scroll',()=>{
 
 // === COUNTDOWN (29 May 2026 reception 6PM) ===
 function tick(){
-    const diff=new Date('2026-05-29T18:00:00')-new Date();
+    const diff=new Date('2026-05-28T08:00:00')-new Date();
     if(diff<=0){['cd-days','cd-hours','cd-mins','cd-secs','cd-ms'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent='00'});return}
     const pad=n=>String(Math.floor(n)).padStart(2,'0');
     const el=id=>document.getElementById(id);
@@ -754,6 +858,95 @@ document.querySelector('.cartoon-groom')?.addEventListener('click',function(){
     h.style.cssText=`position:fixed;font-size:2rem;z-index:9999;animation:sparkleOut 1.5s ease forwards;--dx:0px;--dy:-80px;left:${r.left}px;top:${r.top}px;pointer-events:none`;
     h.textContent='⭐';document.body.appendChild(h);setTimeout(()=>h.remove(),1500);
 });
+
+// === SIDE NAV DOTS ===
+(function(){
+    const sections=[
+        {id:'home',label:'வீடு'},
+        {id:'couple',label:'இணையர்'},
+        {id:'family',label:'மணமக்கள்'},
+        {id:'events',label:'நிகழ்வு'},
+        {id:'thirukkural',label:'திருக்குறள்'},
+        {id:'countdown',label:'நேரம்'},
+        {id:'venue',label:'இடம்'},
+        {id:'footer',label:'விடை'}
+    ];
+    const nav=document.createElement('nav');
+    nav.id='scroll-nav-dots';
+    nav.setAttribute('aria-label','Section navigation');
+    nav.innerHTML=sections.map((s,i)=>`<a href="#${s.id}" class="snd" data-i="${i}" title="${s.label}"><span class="snd__dot"></span><span class="snd__label">${s.label}</span></a>`).join('');
+    document.body.appendChild(nav);
+
+    const dots=nav.querySelectorAll('.snd');
+    const sectionEls=sections.map(s=>document.getElementById(s.id)).filter(Boolean);
+
+    function updateActive(){
+        const mid=window.scrollY+window.innerHeight*0.45;
+        let active=0;
+        sectionEls.forEach((el,i)=>{if(el&&el.offsetTop<=mid)active=i});
+        dots.forEach((d,i)=>{
+            d.classList.toggle('snd--active',i===active);
+        });
+    }
+    window.addEventListener('scroll',updateActive,{passive:true});
+    updateActive();
+
+    dots.forEach(d=>{
+        d.addEventListener('click',e=>{
+            e.preventDefault();
+            const target=document.getElementById(sections[+d.dataset.i].id);
+            if(target)target.scrollIntoView({behavior:'smooth',block:'start'});
+        });
+    });
+})();
+
+// === STAGGERED CHILD REVEALS ===
+(function(){
+    const staggerGroups=['.family-grid','.venue-details-grid','.kural-nav'];
+    staggerGroups.forEach(sel=>{
+        const parent=document.querySelector(sel);
+        if(!parent)return;
+        const children=[...parent.children];
+        children.forEach((c,i)=>{
+            if(!c.classList.contains('reveal-stagger')){
+                c.classList.add('reveal-stagger');
+                c.style.setProperty('--si',i);
+            }
+        });
+    });
+    const sg=new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+            if(e.isIntersecting){e.target.classList.add('visible');sg.unobserve(e.target)}
+        });
+    },{threshold:0.1});
+    document.querySelectorAll('.reveal-stagger').forEach(el=>sg.observe(el));
+})();
+
+// === SECTION ENTRANCE CLASSES ===
+(function(){
+    const map={
+        'couple':'reveal-zoom',
+        'family':'reveal-left',
+        'events':'reveal-right',
+        'thirukkural':'reveal-zoom',
+        'countdown':'reveal-up-big',
+        'venue':'reveal-left'
+    };
+    Object.entries(map).forEach(([id,cls])=>{
+        const sec=document.getElementById(id);
+        if(sec){sec.classList.add('section-reveal');sec.dataset.revealClass=cls;}
+    });
+    const secObs=new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+            if(e.isIntersecting){
+                const cls=e.target.dataset.revealClass||'';
+                if(cls)e.target.classList.add(cls,'section-revealed');
+                secObs.unobserve(e.target);
+            }
+        });
+    },{threshold:0.08});
+    document.querySelectorAll('.section-reveal').forEach(el=>secObs.observe(el));
+})();
 
 // === WELCOME GATE + AUDIO ===
 const audio=document.getElementById('wedding-audio');
