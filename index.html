@@ -216,16 +216,19 @@
     @keyframes petalDrop{0%{opacity:0;transform:translateY(0) rotate(0deg)}10%{opacity:.7}90%{opacity:.4}100%{opacity:0;transform:translateY(105vh) rotate(720deg) translateX(-15px)}}
 
     @media(max-width:768px){
-        .family-grid,.venue-details-grid{grid-template-columns:1fr}
-        .cartoon-bride{width:60px;height:80px}
-        .cartoon-groom{width:60px;height:80px}
-        .cartoon-elephant{width:100px}
-        .thirukkural-section{padding:60px 5%}
-        .kural-card{padding:35px 20px}
-        .family-section{padding:60px 5%}
+        .family-grid,.venue-details-grid{grid-template-columns:1fr!important;gap:20px}
+        .cartoon-bride{width:55px;height:75px}
+        .cartoon-groom{width:55px;height:75px}
+        .cartoon-elephant{width:90px}
+        .thirukkural-section{padding:60px 4%}
+        .kural-card{padding:32px 16px}
+        .family-section{padding:60px 4%}
+        .family-card,.venue-detail-card{padding:26px 18px}
+        .kural-carousel{max-width:100%;padding:0 4px}
     }
     @media(max-width:480px){
         .cartoon-bride,.cartoon-groom,.cartoon-elephant{display:none}
+        .family-grid,.venue-details-grid{grid-template-columns:1fr!important;gap:16px;margin-top:24px}
     }
     </style>
 </head>
