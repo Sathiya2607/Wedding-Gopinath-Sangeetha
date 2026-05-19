@@ -26,31 +26,31 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  max-width: 100%;
 }
 
-/* ── MOBILE SMOOTH SCROLL MOMENTUM ── */
+/* ── HIDE DOUBLE SCROLLBAR ── */
+body::-webkit-scrollbar { width: 0; background: transparent; }
+body { scrollbar-width: none; -ms-overflow-style: none; }
+
+/* ── MOBILE SCROLL FIX ── */
 @media (max-width: 768px) {
-  body {
+  html, body {
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: contain;
+    touch-action: pan-y;
   }
 }
 
-/* ── HIDE NATIVE SCROLLBAR (keep scroll working) ── */
-html::-webkit-scrollbar { width: 0; background: transparent; }
-html { scrollbar-width: none; -ms-overflow-style: none; }
-
-/* ── CUSTOM THIN GOLD SCROLLBAR (desktop only) ── */
+/* ── DESKTOP: thin gold scrollbar ── */
 @media (min-width: 769px) {
-  html::-webkit-scrollbar { width: 4px; }
-  html::-webkit-scrollbar-track { background: #2a0a0a; }
-  html::-webkit-scrollbar-thumb {
+  body { overflow-x: hidden; }
+  body::-webkit-scrollbar { width: 4px; }
+  body::-webkit-scrollbar-track { background: #2a0a0a; }
+  body::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, var(--gold), var(--maroon));
     border-radius: 4px;
   }
-  html { scrollbar-width: thin; scrollbar-color: var(--gold) #2a0a0a; }
+  body { scrollbar-width: thin; scrollbar-color: var(--gold) #2a0a0a; }
 }
 
 /* TAMIL TEXT RENDERING */
@@ -5264,8 +5264,8 @@ body.gate-locked {
    Covers all screen sizes: 320px → 768px
 ══════════════════════════ */
 
-/* Base: prevent any horizontal overflow site-wide */
-html, body {
+/* Base: prevent horizontal overflow site-wide */
+body {
   overflow-x: hidden;
   max-width: 100vw;
 }
